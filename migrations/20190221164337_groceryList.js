@@ -22,7 +22,7 @@ exports.up = function(knex, Promise) {
             .unsigned()
             .notNullable()
         })
-
+        tbl.timestamps(true, true)
 };
 
 exports.down = function(knex, Promise) {

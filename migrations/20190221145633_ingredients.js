@@ -7,7 +7,8 @@ exports.up = function(knex, Promise) {
         .string('name', 128)
         .notNullable()
         .unique()
-    tbl.timeStamps(true, true)
+
+    tbl.timestamps(true, true)
   })
 };
 
