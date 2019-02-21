@@ -14,10 +14,6 @@ exports.up = function(knex, Promise) {
       tbl.string('name', 128).notNullable().unique();
 
     tbl
-        .integer('quantity')
-        .unsigned()
-        .notNullable()
-    tbl
         .text('instructions')
         .notNullable()
       tbl.timestamps(true, true)
@@ -25,5 +21,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  
+  return knex.schema.dropTableIfExists('recipes')
 };
