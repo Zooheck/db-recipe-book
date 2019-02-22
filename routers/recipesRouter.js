@@ -14,4 +14,14 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.post('/', async (req, res) => {
+    const newRecipe = await RecipeFuncs.add(req.body)
+
+    try {
+        res.status(201).json(newRecipe)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ message: 'Error adding recipe' })
+    }
+})
 module.exports = router;
