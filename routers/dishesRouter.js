@@ -28,4 +28,14 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+router.post('/', async (req, res) => {
+    const newDish = await DishFuncs.add(req.body)
+
+    try {
+        res.status(201).json(newDish)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ message: 'Error adding dish' })
+    }
+})
 module.exports = router;
