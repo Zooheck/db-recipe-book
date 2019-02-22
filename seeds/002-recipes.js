@@ -8,13 +8,13 @@ exports.seed = function(knex, Promise) {
         {
           id: 1,
           name: 'Tex Tacos',
-          dish_id: 1,
+          dish_id: 2,
           instructions: 'Testing instruction'
         },
         {
           id: 2,
           name: 'Cheese Pizza',
-          dish_id: 2,
+          dish_id: 1,
           instructions: 'Testing instruction'
         },
         {
@@ -26,13 +26,13 @@ exports.seed = function(knex, Promise) {
         {
           id: 4,
           name: 'Seattle Tacos',
-          dish_id: 1,
+          dish_id: 2,
           instructions: 'Testing instruction'
         },
         {
           id: 5,
           name: 'Pepperoni Pizza',
-          dish_id: 2,
+          dish_id: 1,
           instructions: 'Testing instruction'
         },
         {
